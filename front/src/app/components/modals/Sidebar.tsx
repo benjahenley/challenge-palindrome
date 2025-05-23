@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
-import Button from "../ui/SendButton";
+import React from "react";
 import Subtitle from "../ui/Subtitle";
 import EntryContainer from "../EntryContainer";
 import { historyAtom } from "@/app/atoms/historyAtom";
@@ -16,7 +15,7 @@ export function SidebarModal({
   isOpen: boolean;
   onClose: () => void;
 }) {
-  const [history, setHistory] = useAtom<Entry[] | []>(historyAtom);
+  const [history] = useAtom<Entry[] | []>(historyAtom);
 
   return (
     <>
@@ -29,10 +28,10 @@ export function SidebarModal({
       )}
 
       <aside
-        className="fixed inset-y-0 left-0 w-full md:w-[60vw] max-w-[700px] bg-slate-100 dark:bg-gray-700 shadow-lg z-50 transition-transform duration-300 ease-in-out p-4 md:p-10 overflow-hidden"
+        className="fixed inset-y-0 left-0 w-full md:w-[60vw] max-w-[700px] bg-slate-100 dark:bg-gray-700 shadow-lg z-50 transition-transform duration-300 ease-in-out p-6 overflow-hidden"
         style={{ transform: isOpen ? "translateX(0)" : "translateX(-100%)" }}>
-        <div className="w-full flex flex-row justify-between items-center py-2 mb-5 px-2">
-          <Subtitle>Historial</Subtitle>
+        <div className="w-full flex flex-row justify-between items-center py-2 mb-5">
+          <Subtitle className="">Historial</Subtitle>
           <ImCross
             className="text-gray-800 dark:text-slate-100 cursor-pointer h-5 w-5"
             onClick={onClose}

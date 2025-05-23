@@ -10,7 +10,6 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { HelpTooltip } from "../HelpTooltip";
 import checkPalindrome from "@/app/services/checkPalindrome";
 import ErrorMessage from "../Error";
-import { FiSend } from "react-icons/fi";
 import { useAtom } from "jotai";
 import { historyAtom } from "@/app/atoms/historyAtom";
 import { Entry } from "@/app/types/entry";
@@ -21,7 +20,7 @@ export default function PalindromeChecker() {
   const [value, setValue] = useState("");
   const [help, setHelp] = useState(false);
   const [error, setError] = useState("");
-  const [history, setHistory] = useAtom<Entry[] | []>(historyAtom);
+  const [, setHistory] = useAtom<Entry[] | []>(historyAtom);
 
   const [words, setWords] = useState<Entry[] | []>([]);
 
@@ -37,8 +36,10 @@ export default function PalindromeChecker() {
 
       setHistory((history) => [...history, newEntry]);
       setWords((words) => [...words, newEntry]);
-    } catch (e: any) {
-      setError(e.message);
+    } catch (error: unknown) {
+      const errorMessage =
+        error instanceof Error ? error.message : "An unknown error occurred";
+      setError(errorMessage);
     }
 
     setValue("");

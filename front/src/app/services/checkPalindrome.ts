@@ -17,11 +17,15 @@ export default async function checkPalindrome(value: string): Promise<Entry> {
     };
 
     return newEntry;
-  } catch (e: any) {
-    console.error(
-      "Hubo un error accediendo al servidor.",
-      e?.response?.data || e.message
-    );
+  } catch (error: unknown) {
+    if (axios.isAxiosError(error)) {
+      console.error(
+        "Hubo un error accediendo al servidor.",
+        error.response?.data || error.message
+      );
+    } else {
+      console.error("Hubo un error accediendo al servidor.", error);
+    }
     throw new Error("Hubo un error accediendo al servidor.");
   }
 }

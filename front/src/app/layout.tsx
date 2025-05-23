@@ -3,11 +3,6 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 const switzer = localFont({
   src: "./fonts/Switzer-Variable.ttf",
   variable: "--font-switzer",
