@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Bienvenidos a Palindromium!!!
 
-## Getting Started
+Esta es una WebApp Excelente para determinar si una palabra o frase es en verdad un Palíndromo. Que es un palíndromo? es una palabra o frase cuyas letras están dispuestas de tal manera que resulta la misma leída de izquierda a derecha que de derecha a izquierda; por ejemplo, anilina; dábale arroz a la zorra el abad.
 
-First, run the development server:
+Para poder usar instalar la web correctamente debemos seguir los siguientes pasos:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Si no lo hiciste todavía, descargar el backend. Esto nos servira para hacer el chequeo si de verdad lo ingresado es un palíndromo.
+2. Debemos hacer click en el boton verde que dice "<> Code" en el inicio del projecto en github.
+3. Seleccionar la opcion SSH.
+4. Copiar el link que comienza con git@...
+5. Abrir la terminal. Navegar hasta el directorio deseado utilizando el comando cd para cambiar de directorio.
+6. Cuando encontremos el destino que nos agrada pegamos el comando en la terminal, esto creara un clon de nuestro frontend.
+7. Arrastrar el archivo hasta la aplicacion de edicion de codigo que más nos guste.
+8. ingresar en la terminal local npm install para descargar dependencias.
+9. Ya casi estamos! Ahora debemos crear un archivo .env e ingresar el puerto de nuestro backend. NEXT_PUBLIC_BACKEND_URL es la variable que debemos completar. Asegurate de que esta sea la misma en tu backend!
+10. Ahora que ingresaste la variable podes dar de alta tu backend (si todavia no lo hiciste).
+11. Una vez que estas con el servidor andando ya podemos ingresar 'npm run dev' y esto nos iniciara el nuestro front en el navegador.
+12. Ya estas adentro! Ya podés ingresar palabras en el input y apretar enter para verificar. Del lado izquierdo se encuentra un historial con todas las palabras que iras ingresando.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Muchas Gracias por usar PALINDROMIUM,
+ATTE, Benja.
