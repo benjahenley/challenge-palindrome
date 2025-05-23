@@ -10,8 +10,37 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Palindrome Checker",
-  description: "Check if a word is a palindrome",
+  title: "Palindromium | Check Palindromes Online",
+  description:
+    "Quickly check if a word or phrase is a palindrome with this free online tool by SurisCode",
+  icons: {
+    icon: "/logo-suris.png",
+  },
+  applicationName: "Palindromium",
+  authors: [{ name: "SurisCode", url: "https://suriscode.com" }],
+  keywords: ["palindrome", "checker", "word", "text", "tool", "SurisCode"],
+  creator: "SurisCode Software Factory",
+  publisher: "SurisCode",
+  robots: "index, follow",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
+  openGraph: {
+    type: "website",
+    title: "Palindromium by SurisCode",
+    description:
+      "Check if a word or phrase reads the same backwards as forwards",
+    siteName: "Palindromium",
+    images: [
+      {
+        url: "/logo-suris.png",
+        width: 800,
+        height: 800,
+        alt: "SurisCode Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -21,9 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-screen w-full" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className={`${switzer.variable} h-full w-full`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
